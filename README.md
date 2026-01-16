@@ -1,5 +1,26 @@
 AnchalPrasadTeraFac
 Deep Learning Project: Progressive Optimization (Level 1 → Level 4)
+Links:
+====================================================================================
+📎 Google Colab Notebooks
+
+Level 1:
+https://colab.research.google.com/drive/1R_sOwR8hA3WECqf49mtT5EdrwAuvvara?usp=sharing
+
+Level 2:
+https://colab.research.google.com/drive/1SENoeVXWDfx4QQlKEN7ZfiC7CL1J7DFg?usp=sharing
+
+Level 3:
+https://colab.research.google.com/drive/1kXEABADtKLfKFl6Ia5aXopJbLPP9ci9Z?usp=sharing
+
+Level 4:
+https://colab.research.google.com/drive/1hKs7I_pQYEbkuRaX-fiTfUTL4a2WSx6q?usp=sharing
+
+📂 Drive Link:
+https://drive.google.com/drive/folders/1kEm4Zo50ODPOrMyT52Feg1Pi5qRkrLOc?usp=sharing
+
+===========================================================================================
+
 
 Model: ResNet50 (ImageNet Pretrained)
 Framework: PyTorch
