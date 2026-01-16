@@ -189,16 +189,16 @@ Training & Validation Loss Curves
 📎 Google Colab Notebooks
 
 Level 1:
-https://colab.research.google.com/drive/1R_sOwR8hA3WECqf49mtT5EdrwAuvvara
+https://colab.research.google.com/drive/1R_sOwR8hA3WECqf49mtT5EdrwAuvvara?usp=sharing
 
 Level 2:
-https://colab.research.google.com/drive/1SENoeVXWDfx4QQlKEN7ZfiC7CL1J7DFg
+https://colab.research.google.com/drive/1SENoeVXWDfx4QQlKEN7ZfiC7CL1J7DFg?usp=sharing
 
 Level 3:
-https://colab.research.google.com/drive/1kXEABADtKLfKFl6Ia5aXopJbLPP9ci9Z
+https://colab.research.google.com/drive/1kXEABADtKLfKFl6Ia5aXopJbLPP9ci9Z?usp=sharing
 
 Level 4:
-https://colab.research.google.com/drive/1hKs7I_pQYEbkuRaX-fiTfUTL4a2WSx6q
+https://colab.research.google.com/drive/1hKs7I_pQYEbkuRaX-fiTfUTL4a2WSx6q?usp=sharing
 
 💾 Model Checkpoints (.pth)
 
