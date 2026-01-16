@@ -1,115 +1,175 @@
-# AnchalPrasadTeraFac
-Deep Learning Project | Progressive Optimization (Level 1 → Level 4)
+AnchalPrasadTeraFac
+Deep Learning Project: Progressive Optimization (Level 1 → Level 4)
+
 Model: ResNet50 (ImageNet Pretrained)
 Framework: PyTorch
 Dataset: CIFAR-10
+
 📌 Project Overview
-This project implements a progressive, multi-level deep learning pipeline for image classification on the CIFAR-10 dataset, where each level introduces more advanced techniques to improve generalization, robustness, and accuracy.
-The goal is to systematically analyze the impact of modern training strategies such as:
+
+This project presents a progressive, multi-level deep learning pipeline for image classification on the CIFAR-10 dataset.
+Each level incrementally introduces advanced training strategies to improve accuracy, generalization, robustness, and training stability.
+
+The objective is to systematically analyze the impact of modern deep learning techniques, including:
+
 Transfer Learning
+
 Advanced Data Augmentation
-Regularization
+
+Regularization Techniques
+
 Test-Time Augmentation (TTA)
-Strong Optimization Schedules
-🧠 Dataset
+
+Strong Optimization & Scheduling Strategies
+
+This structured approach mirrors real-world research and industry workflows.
+
+🧠 Dataset Details
+
 Dataset: CIFAR-10
-Classes: 10
-Split:
-Train: 45,000
+
+Number of Classes: 10
+
+Data Split:
+
+Training: 45,000
+
 Validation: 5,000
+
 Test: 5,000
+
 🏗️ Model Architecture
+
 Backbone: ResNet50
+
 Pretraining: ImageNet
+
 Classifier Head: Modified for 10 classes
+
 Total Parameters: ~23.5M
-📊 Training Levels Summary
+
+📊 Progressive Training Levels
 🔹 Level 1 — Baseline Transfer Learning
-Objective: Establish a strong baseline
+
+Objective: Establish a strong baseline using transfer learning.
+
 Techniques Used
+
 ImageNet pretrained ResNet50
-Basic augmentations (Flip, Crop)
-Freeze backbone → train classifier head
-Fine-tune full model
+
+Basic augmentations (Random Crop, Horizontal Flip)
+
+Frozen backbone → train classifier head
+
+Full model fine-tuning
+
 CrossEntropy Loss
-AdamW optimizer
-Result
+
+AdamW Optimizer
+
+Results
+
 Test Accuracy: 96.34%
+
 📁 Notebook: notebooks/Level1.ipynb
 📦 Model: checkpoints/level1_best.pth
-🔹 Level 2 — Advanced Augmentation & Regularization ✅
-Objective: Improve generalization & robustness
-New Techniques Added
+
+🔹 Level 2 — Advanced Augmentation & Regularization
+
+Objective: Improve generalization and robustness.
+
+New Techniques Introduced
+
 RandAugment
+
 MixUp & CutMix
-Label Smoothing (0.1)
+
+Label Smoothing (ε = 0.1)
+
 Random Erasing
-Cosine LR Scheduler
+
+Cosine Learning Rate Scheduler
+
 Test-Time Augmentation (TTA)
+
 Results
-Metric
-Accuracy
-Level 1 Baseline
-96.34%
-Level 2 (Standard)
-96.56%
-Level 2 (with TTA)
-96.88%
-📈 Improvement: +0.54%
+
+Metric	Accuracy
+Level 1 Baseline	96.34%
+Level 2 (Standard)	96.56%
+Level 2 (with TTA)	96.88%
+
+📈 Overall Improvement: +0.54%
+
 📁 Notebook: notebooks/Level2.ipynb
 📦 Model: checkpoints/level2_best.pth
-📌 Level 2 — Per-Class Accuracy
-Class
-Accuracy
-airplane
-97.75%
-automobile
-98.02%
-bird
-97.27%
-cat
-91.15%
-deer
-97.04%
-dog
-93.85%
-frog
-98.37%
-horse
-97.17%
-ship
-98.21%
-truck
-96.88%
-🔹 Level 3 — Optimization & Training Stability (Planned / In Progress)
-Focus Areas
+
+📌 Per-Class Accuracy (Level 2)
+Class	Accuracy
+airplane	97.75%
+automobile	98.02%
+bird	97.27%
+cat	91.15%
+deer	97.04%
+dog	93.85%
+frog	98.37%
+horse	97.17%
+ship	98.21%
+truck	96.88%
+🔹 Level 3 — Optimization & Training Stability
+
+Objective: Improve convergence behavior and training stability.
+
+Techniques Applied
+
 Learning rate warmup
-Progressive unfreezing
-EMA (Exponential Moving Average)
+
+Progressive layer unfreezing
+
+Exponential Moving Average (EMA)
+
 Stronger regularization control
-Longer fine-tuning with lower LR
+
+Extended fine-tuning with lower learning rate
+
 📁 Notebook: notebooks/Level3.ipynb
 📦 Model: checkpoints/level3_best.pth
-🔹 Level 4 — Research-Level Enhancements (Planned)
-Advanced Techniques
+
+🔹 Level 4 — Research-Level Enhancements
+
+Objective: Apply advanced research-oriented techniques and analysis.
+
+Advanced Methods
+
 Stochastic Weight Averaging (SWA)
-Advanced TTA strategies
+
+Advanced Test-Time Augmentation strategies
+
 Hyperparameter ablation studies
-Calibration metrics (ECE)
+
+Model calibration (Expected Calibration Error – ECE)
+
 Confusion matrix & error analysis
+
 📁 Notebook: notebooks/Level4.ipynb
 📦 Model: checkpoints/level4_best.pth
-📐 Metrics Used
-Accuracy (Top-1)
-Per-class Accuracy
-Validation Accuracy
-Test Accuracy
-Test-Time Augmented Accuracy
-Loss Curves (Train / Val)
-❗ Note: Segmentation metrics (IoU, Dice, SMAPE, F1-mask) are not applicable since this is a classification task, not segmentation.
-vist: My Drive
-https://drive.google.com/drive/folders/1kEm4Zo50ODPOrMyT52Feg1Pi5qRkrLOc?usp=sharing
 
+📐 Evaluation Metrics
+
+Top-1 Accuracy
+
+Per-Class Accuracy
+
+Validation Accuracy
+
+Test Accuracy
+
+Test-Time Augmented Accuracy
+
+Training & Validation Loss Curves
+
+
+📁 Project Structure
 ├── notebooks/
 │   ├── Level1.ipynb
 │   ├── Level2.ipynb
@@ -117,40 +177,60 @@ https://drive.google.com/drive/folders/1kEm4Zo50ODPOrMyT52Feg1Pi5qRkrLOc?usp=sha
 │   └── Level4.ipynb
 │
 ├── checkpoints/
-│   
 │
 ├── report/
 │
 ├── results/
-│ 
-|──requirements.txt
+│
+├── requirements.txt
 │
 └── README.md
+
 📎 Google Colab Notebooks
-Level 1: https://colab.research.google.com/drive/1R_sOwR8hA3WECqf49mtT5EdrwAuvvara?usp=sharing
-Level 2: https://colab.research.google.com/drive/1SENoeVXWDfx4QQlKEN7ZfiC7CL1J7DFg?usp=sharing
-Level 3: https://colab.research.google.com/drive/1kXEABADtKLfKFl6Ia5aXopJbLPP9ci9Z?usp=sharing
-Level 4: https://colab.research.google.com/drive/1hKs7I_pQYEbkuRaX-fiTfUTL4a2WSx6q?usp=sharing
-💾 Model Files (.pth)
-✔ .pth files contain:
-Model weights
+
+Level 1:
+https://colab.research.google.com/drive/1R_sOwR8hA3WECqf49mtT5EdrwAuvvara
+
+Level 2:
+https://colab.research.google.com/drive/1SENoeVXWDfx4QQlKEN7ZfiC7CL1J7DFg
+
+Level 3:
+https://colab.research.google.com/drive/1kXEABADtKLfKFl6Ia5aXopJbLPP9ci9Z
+
+Level 4:
+https://colab.research.google.com/drive/1hKs7I_pQYEbkuRaX-fiTfUTL4a2WSx6q
+
+💾 Model Checkpoints (.pth)
+
+Each .pth file includes:
+
+Trained model weights
+
 Optimizer state
+
 Best validation checkpoint
-These allow full reproducibility and inference reuse.
+
+This enables full reproducibility and inference reuse.
+
 ✅ Project Status
-Level
-Status
-Level 1
-✅ Completed
-Level 2
-✅ Completed
-Level 3
-✅ Completed
-Level 4
-✅ Completed
+Level	Status
+Level 1	✅ Completed
+Level 2	✅ Completed
+Level 3	✅ Completed
+Level 4	✅ Completed
 🏁 Final Notes
+
 This project demonstrates:
-Strong understanding of deep learning training pipelines
-Practical application of modern regularization
-Ability to conduct ablation studies
-Industry-ready documentation & reproducibility
+
+Strong understanding of deep learning pipelines
+
+Practical application of modern regularization techniques
+
+Ability to conduct ablation and optimization studies
+
+Industry-ready documentation and reproducibility
+
+Research-oriented mindset with structured experimentation
+
+📂 Drive Link:
+https://drive.google.com/drive/folders/1kEm4Zo50ODPOrMyT52Feg1Pi5qRkrLOc?usp=sharing
